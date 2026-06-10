@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payments Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="8" height="8" rx="2" fill="#58a6ff"/>
+          <rect x="13" y="3" width="8" height="8" rx="2" fill="#3fb950" opacity="0.7"/>
+          <rect x="3" y="13" width="8" height="8" rx="2" fill="#3fb950" opacity="0.5"/>
+          <rect x="13" y="13" width="8" height="8" rx="2" fill="#58a6ff" opacity="0.4"/>
+        </svg>
+        <span class="topbar-title">payments-pipeline</span>
+        <span class="topbar-branch">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true">
+            <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Z"/>
+          </svg>
+          main
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-meta">Last updated just now</span>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <section class="readme-header">
+        <div class="readme-icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+            <path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Z"/>
+          </svg>
+        </div>
+        <span>README.md</span>
+      </section>
+
+      <div class="readme-card">
+        <h1 class="readme-title">Payments Pipeline</h1>
+        <p class="readme-desc">Outstanding obligations tracker — current cycle summary with fund availability and deficit analysis.</p>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon metric-icon--blue" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"/></svg>
+            </div>
+            <span class="metric-label">Total due</span>
+            <span class="metric-value">$31,405.27</span>
+            <span class="metric-sub">9 items pending</span>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon metric-icon--green" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm6.78-2.97a.75.75 0 0 0-1.06 1.06L8.69 7.5l-1.47 1.47a.75.75 0 1 0 1.06 1.06l2-2a.75.75 0 0 0 0-1.06l-2-2Z"/></svg>
+            </div>
+            <span class="metric-label">Available funds</span>
+            <span class="metric-value metric-value--green">$19,862.86</span>
+            <span class="metric-sub">Bank + Amazon transfer</span>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon metric-icon--red" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm6.75 2.25h-4.5a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5Zm0-5.25a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0Z"/></svg>
+            </div>
+            <span class="metric-label">Net deficit</span>
+            <span class="metric-value metric-value--red">($11,542.41)</span>
+            <span class="metric-sub">Funding gap this cycle</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="file-section">
+        <div class="file-header">
+          <div class="file-header-left">
+            <svg class="commit-icon" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+              <path d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/>
+            </svg>
+            <span class="commit-msg">chore: update payments pipeline — cycle <span class="mono">2024-Q4</span></span>
+          </div>
+          <span class="file-count">9 rows</span>
+        </div>
+
+        <div class="table-wrap">
+          <table class="pip-table">
+            <thead>
+              <tr>
+                <th class="col-sr">#</th>
+                <th class="col-name">Payee</th>
+                <th class="col-detail">Category</th>
+                <th class="col-amount">Amount</th>
+                <th class="col-paid">Payments made</th>
+                <th class="col-remaining">Remaining</th>
+                <th class="col-status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="muted mono">1</td>
+                <td class="payee-name">Ramzan</td>
+                <td><span class="tag tag-salary">Salary</span></td>
+                <td class="mono">$1,200.00</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$1,200.00</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">2</td>
+                <td class="payee-name">Mudassir</td>
+                <td><span class="tag tag-salary">Salary</span></td>
+                <td class="mono">$530.00</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$530.00</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">3</td>
+                <td class="payee-name">Dragana</td>
+                <td><span class="tag tag-salary">Salary</span></td>
+                <td class="mono">$2,100.00</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$2,100.00</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">4</td>
+                <td class="payee-name">Umer</td>
+                <td><span class="tag tag-salary">Salary</span></td>
+                <td class="mono">$1,250.00</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$1,250.00</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">5</td>
+                <td class="payee-name">Intuit</td>
+                <td><span class="tag tag-loan">Loan</span></td>
+                <td class="mono">$8,819.00</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$8,819.00</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">6</td>
+                <td class="payee-name">Office</td>
+                <td><span class="tag tag-rental">Rental</span></td>
+                <td class="mono">$320.00</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$320.00</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">7</td>
+                <td class="payee-name">Gold Card</td>
+                <td><span class="tag tag-amex">Amex</span></td>
+                <td class="mono highlight-row">$10,027.59</td>
+                <td class="mono muted">—</td>
+                <td class="mono highlight-row">$10,027.59</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">8</td>
+                <td class="payee-name">Blue Card</td>
+                <td><span class="tag tag-amex">Amex</span></td>
+                <td class="mono">$1,658.68</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$1,658.68</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+              <tr>
+                <td class="muted mono">9</td>
+                <td class="payee-name">Domenick</td>
+                <td><span class="tag tag-personal">Personal</span></td>
+                <td class="mono">$5,500.00</td>
+                <td class="mono muted">—</td>
+                <td class="mono">$5,500.00</td>
+                <td><span class="status-dot status-pending" title="Pending"></span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="total-row">
+                <td colspan="3" class="total-label">Total</td>
+                <td class="mono total-amt">$31,405.27</td>
+                <td class="mono muted">—</td>
+                <td class="mono total-amt">$31,405.27</td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="fund-footer">
+          <div class="fund-row">
+            <span class="fund-label">
+              <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true" style="margin-right:6px;vertical-align:-2px;opacity:.6"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.5h-13v6.751Zm13-8.501h-13V3.75a.25.25 0 0 1 .25-.25h12.5a.25.25 0 0 1 .25.25Z"/></svg>
+              Current funds in bank
+            </span>
+            <span class="fund-value mono">$17,684.96</span>
+          </div>
+          <div class="fund-row">
+            <span class="fund-label">
+              <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true" style="margin-right:6px;vertical-align:-2px;opacity:.6"><path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.199-.52.353-.88.385-.36.033-.792-.045-1.227-.518-.434-.474-.826-.965-1.083-1.355l-.017-.027V11h1.25a.75.75 0 0 1 0 1.5h-11a.75.75 0 0 1 0-1.5H2V9.5H.75a.75.75 0 0 1 0-1.5H2v-.5a.75.75 0 0 1 1.5 0V11h5V1.5h-2a.75.75 0 0 1 0-1.5h3.25Z"/></svg>
+              Amazon payment incoming
+            </span>
+            <span class="fund-value mono">$2,177.90</span>
+          </div>
+          <div class="fund-divider"></div>
+          <div class="fund-row fund-row--deficit">
+            <span class="fund-label fund-label--strong">
+              <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true" style="margin-right:6px;vertical-align:-2px"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>
+              Net deficit
+            </span>
+            <span class="fund-value fund-value--deficit mono">($11,542.41)</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <span>payments-pipeline · auto-generated summary</span>
+      <span class="footer-badge">
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="4"/></svg>
+        9 pending
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>
